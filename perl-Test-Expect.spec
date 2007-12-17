@@ -8,7 +8,6 @@ Group:		Development/Perl
 Summary:	Automated driving and testing of terminal-based programs
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{realname}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel 
 BuildRequires:  perl(Expect::Simple)
 BuildRequires:  perl(Module::Build)
