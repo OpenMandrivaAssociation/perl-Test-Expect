@@ -1,8 +1,8 @@
 %define realname   Test-Expect
 
 Name:		perl-%{realname}
-Version:	0.30
-Release:	%mkrel 3
+Version:	0.31
+Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Automated driving and testing of terminal-based programs
