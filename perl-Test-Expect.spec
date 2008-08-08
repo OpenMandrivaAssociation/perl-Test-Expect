@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:	0.31
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Automated driving and testing of terminal-based programs
