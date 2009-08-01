@@ -1,19 +1,21 @@
-%define realname   Test-Expect
+%define upstream_name    Test-Expect
+%define upstream_version 0.31
 
-Name:		perl-%{realname}
-Version:	0.31
-Release:	%mkrel 2
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Automated driving and testing of terminal-based programs
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel 
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(Expect::Simple)
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Class::Accessor::Chained)
 BuildArch:      noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Test::Expect is a module for automated driving and testing of terminal-based
@@ -23,7 +25,7 @@ is based on the same concepts as the Tcl Expect tool.
 Test::Expect is intended for use in a test script.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL INSTALLDIRS=vendor
@@ -44,4 +46,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
